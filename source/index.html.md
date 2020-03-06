@@ -16,7 +16,7 @@ search: true
 
 ### by Daniel Kehoe
 
-_Last updated 5 March 2020_
+_Last updated 6 March 2020_
 
 > This is an article from the RailsApps project. The [RailsApps project](http://railsapps.github.io/) provides [Rails Example Applications](http://railsapps.github.io/) that developers use as starter apps.
 
@@ -61,8 +61,6 @@ If you updated to Catalina from an earlier version of macOS (sometimes called an
 MacOS Catalina was released on October 7, 2019. Make sure you have the latest version of macOS. Under the Apple menu, check "About This Mac." It should show "Version 10.15.0" or newer. If you've owned your Mac for several years and haven't updated macOS, be prepared to spend several hours updating the operating system.
 
 If you need to upgrade, see Apple's instructions [Upgrade to macOS Catalina](http://www.apple.com/osx/how-to-upgrade/). You can install macOS 10.15 (Catalina) from the Mac App Store for free. Allow plenty of time for the download and installation (it may take several hours).
-
-#### What's Different in Catalina (for Experts)
 
 If you've already done development on earlier Mac versions, be aware of these changes in Catalina:
 
@@ -185,9 +183,9 @@ install-time: 1525925856
 groups: com.apple.FindSystemFiles.pkg-group
 ```
 
-`/usr/sbin/pkgutil --packages | grep CL`
+`$ /usr/sbin/pkgutil --packages | grep CL`
 
-`/usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables`
+`$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables`
 
 If the Command Line Tools executables are available, you'll have no problem compiling Nokogiri or any other gems that require native extensions.
 
