@@ -2,10 +2,18 @@
 <!doctype html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5109366-21"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-5109366-21');
+    </script>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Install Ruby on Rails 6.0 · Mac · How To Guide · Daniel Kehoe</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -196,309 +204,650 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
+      <img src="images/logo-4f69a0c7.png" class="logo" alt="Learn Ruby on Rails" style="padding:1em;">>
+      <div style="color:white;padding:1em;margin-top:-2em;">
+        Like this article? For more from the author, get the free book at
+        <a href="http://learn-rails.com/learn-ruby-on-rails.html" style="color:gray;">learn-rails.com</a>
+      </div>
         <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
+          <input type="text" class="search" id="input-search" placeholder="Search the article">
         </div>
         <ul class="search-results"></ul>
-      <ul id="toc" class="toc-list-h1">
+      <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#install-ruby-on-rails-6-0-macos" class="toc-h1 toc-link" data-title="install-ruby-on-rails-6-0-macos">Install Ruby on Rails 6.0 · macOS</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#by-daniel-kehoe" class="toc-h2 toc-link" data-title="by-daniel-kehoe">by Daniel Kehoe</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#if-you-are-new-to-rails" class="toc-h2 toc-link" data-title="if-you-are-new-to-rails">If You Are New to Rails</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#ruby-version-managers" class="toc-h2 toc-link" data-title="ruby-version-managers">Ruby Version Managers</a>
+                  </li>
+                  <li>
+                    <a href="#prepare-your-computer" class="toc-h2 toc-link" data-title="prepare-your-computer">Prepare Your Computer</a>
+                  </li>
+                  <li>
+                    <a href="#install-homebrew" class="toc-h2 toc-link" data-title="install-homebrew">Install Homebrew</a>
+                  </li>
+                  <li>
+                    <a href="#configure-git" class="toc-h2 toc-link" data-title="configure-git">Configure Git</a>
+                  </li>
+                  <li>
+                    <a href="#install-ruby-install-and-chruby" class="toc-h2 toc-link" data-title="install-ruby-install-and-chruby">Install Ruby-install and Chruby</a>
+                  </li>
+                  <li>
+                    <a href="#install-ruby" class="toc-h2 toc-link" data-title="install-ruby">Install Ruby</a>
+                  </li>
+                  <li>
+                    <a href="#check-the-gem-manager" class="toc-h2 toc-link" data-title="check-the-gem-manager">Check the Gem Manager</a>
+                  </li>
+                  <li>
+                    <a href="#install-rails" class="toc-h2 toc-link" data-title="install-rails">Install Rails</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-workspace-folder" class="toc-h2 toc-link" data-title="create-a-workspace-folder">Create a Workspace Folder</a>
+                  </li>
+                  <li>
+                    <a href="#new-rails-application" class="toc-h2 toc-link" data-title="new-rails-application">New Rails Application</a>
+                  </li>
+                  <li>
+                    <a href="#terminal-application-and-text-editor" class="toc-h2 toc-link" data-title="terminal-application-and-text-editor">Terminal Application and Text Editor</a>
+                  </li>
+                  <li>
+                    <a href="#rails-example-applications" class="toc-h2 toc-link" data-title="rails-example-applications">Rails Example Applications</a>
+                  </li>
+                  <li>
+                    <a href="#rails-composer" class="toc-h2 toc-link" data-title="rails-composer">Rails Composer</a>
+                  </li>
+                  <li>
+                    <a href="#databases-for-rails" class="toc-h2 toc-link" data-title="databases-for-rails">Databases for Rails</a>
+                  </li>
+                  <li>
+                    <a href="#deployment" class="toc-h2 toc-link" data-title="deployment">Deployment</a>
+                  </li>
+                  <li>
+                    <a href="#security" class="toc-h2 toc-link" data-title="security">Security</a>
+                  </li>
+                  <li>
+                    <a href="#troubleshooting" class="toc-h2 toc-link" data-title="troubleshooting">Troubleshooting</a>
+                  </li>
+                  <li>
+                    <a href="#where-to-get-help" class="toc-h2 toc-link" data-title="where-to-get-help">Where to Get Help</a>
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
-      </ul>
+      </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li>This article is open source.</li>
+            <li>Questions? <a href='https://stackoverflow.com/questions/tagged/ruby-on-rails'>Ask on Stack Overflow</a></li>
+            <li>Have fixes? <a href='https://github.com/RailsApps/installrubyonrails-mac'>Add to the GitHub repo</a></li>
+            <li>Want more? <a href='http://railsapps.github.io/'>See the RailsApps project</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='install-ruby-on-rails-6-0-macos'>Install Ruby on Rails 6.0 · macOS</h1><h3 id='by-daniel-kehoe'>by Daniel Kehoe</h3>
+<p><em>Last updated 6 March 2020</em></p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>This is an article from the RailsApps project. The <a href="http://railsapps.github.io/">RailsApps project</a> provides <a href="http://railsapps.github.io/">Rails Example Applications</a> that developers use as starter apps.</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Install Ruby on Rails 6.0 on macOS 10.15 Catalina. Up-to-date and detailed instructions, plus troubleshooting, for the Rails newest release. How to set up and install Rails 6.0, the newest version of Rails, on macOS 10.15 Catalina.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>This is the most complete and up-to-date installation guide for Ruby on Rails on macOS and a favorite of Rails developers. It explains how to set up a development environment for Rails, the same used by any professional Rails developer.</p>
+<h3 id='if-you-are-new-to-rails'>If You Are New to Rails</h3>
+<p>To use Rails on macOS, you&#39;ll need Ruby (an interpreter for the Ruby programming language) plus gems (software libraries) containing the Rails web application development framework. If you&#39;re new to Rails, see <a href="http://railsapps.github.io/what-is-ruby-rails.html">What is Ruby on Rails?</a> or get the free book <a href="http://learn-rails.com/learn-ruby-on-rails.html"><em>Learn Ruby on Rails</em></a>.</p>
+<h3 id='ruby-version-managers'>Ruby Version Managers</h3>
+<blockquote>
+<p>You may hear about one-click installation programs such as <a href="http://railsinstaller.org/">RailsInstaller</a>, <a href="http://www.atmos.org/cinderella/">Cinderella</a>, and <a href="http://bitnami.org/stack/rubystack">BitNami RubyStack</a>. These installation programs are often outdated. Most developers install from scratch.</p>
+</blockquote>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>MacOS comes with a &quot;system Ruby&quot; pre-installed. MacOS Catalina includes Ruby 2.6.3 which is not the newest version. Do not use the system Ruby (see <a href="https://robots.thoughtbot.com/psa-do-not-use-system-ruby">an article</a> for why). You should install a Ruby version manager and update to the newest Ruby version. You&#39;ll find instructions below.</p>
+
+<blockquote>
+<p>Use <a href="https://github.com/postmodern/chruby">Chruby</a> to switch between Ruby versions. Some developers prefer <a href="https://rvm.io/">RVM</a> or <a href="https://github.com/sstephenson/rbenv">rbenv</a> but I now  recommend Chruby.</p>
+</blockquote>
+
+<p>A Ruby version manager makes it easy to switch between Ruby versions. I recommend <a href="https://github.com/postmodern/chruby">Chruby</a>. <a href="https://rvm.io/">RVM</a> was popular in the past but its additional features (its gemsets) are no longer necessary and it adds unnecessary complexity. Sam Stephenson&#39;s <a href="https://github.com/sstephenson/rbenv">rbenv</a> is also popular, but requires extra steps (the rehash command) and modifies gems when you install them.</p>
+
+<p>Even if you are a student only building new Rails applications, you should be prepared to manage multiple versions of Ruby. In the future, you will need to install newer Ruby versions as they are released. And if you maintain older Rails applications, you will need a Ruby version manager.</p>
+
+<p>You&#39;ll need to prepare your computer before installing Ruby on Rails.</p>
+<h2 id='prepare-your-computer'>Prepare Your Computer</h2>
+<blockquote>
+<p>A Hosted Development Alternative</p>
+
+<p>You can use Ruby on Rails without actually installing it on your computer. Hosted development, using a service such as <a href="https://aws.amazon.com/cloud9/">AWS Cloud9</a>, means you get a computer &quot;in the cloud&quot; that you use from your web browser. Any computer can access the hosted development environment, though you&#39;ll need a broadband connection. Cloud9 is free for small projects.</p>
+
+<p>Using a hosted environment means you are no longer dependent on the physical presence of a computer that stores all your files. If your computer crashes or is stolen, you can continue to use your hosted environment from any other computer. Likewise, if you frequently work on more than one computer, a hosted environment eliminates the difficulty of maintaining duplicate development environments. However, most developers set up a local developmemt environment on their own computer.</p>
+</blockquote>
+
+<p>These instructions are for macOS Catalina 10.15.</p>
+<h3 id='if-you-updated-to-macos-catalina'>If You Updated to macOS Catalina</h3>
+<p>If you updated to Catalina from an earlier version of macOS (sometimes called an &quot;over the top&quot; installation), and you previously installed a Rails development environment, your earlier installation remains intact. You will need to <a href="http://railsapps.github.io/xcode-command-line-tools.html">install the new version of Xcode Command Line Tools</a> (full instructions below). Though Rails is still intact after an update, read through this article and take this opportunity to update your development environment.</p>
+<h3 id='upgrade-macos-to-catalina'>Upgrade macOS to Catalina</h3>
+<p>MacOS Catalina was released on October 7, 2019. Make sure you have the latest version of macOS. Under the Apple menu, check &quot;About This Mac.&quot; It should show &quot;Version 10.15.0&quot; or newer. If you&#39;ve owned your Mac for several years and haven&#39;t updated macOS, be prepared to spend several hours updating the operating system.</p>
+
+<p>If you need to upgrade, see Apple&#39;s instructions <a href="http://www.apple.com/osx/how-to-upgrade/">Upgrade to macOS Catalina</a>. You can install macOS 10.15 (Catalina) from the Mac App Store for free. Allow plenty of time for the download and installation (it may take several hours).</p>
+
+<p>If you&#39;ve already done development on earlier Mac versions, be aware of these changes in Catalina:</p>
+
+<ul>
+<li>Catalina uses Zsh as a default shell instead of Bash. You&#39;ll set configurations (such as PATH and aliases) in the <em>.zshrc</em> file.</li>
+<li>Apple has removed the <em>/usr/include</em> folder making it difficult to compile some older system tools.</li>
+</ul>
+<h3 id='terminal-application-for-beginners'>Terminal Application (for Beginners)</h3>
+<blockquote>
+<p>To learn more about Unix shell commands, read <a href="https://learnpythonthehardway.org/book/appendixa.html">The Command Line Crash Course</a> or <a href="http://www.learnenough.com/command-line-tutorial">Learn Enough Command Line to Be Dangerous</a>.</p>
+</blockquote>
+
+<p>You&#39;ll need to use the Terminal application to install Ruby and develop Rails applications. The <a href="http://en.wikipedia.org/wiki/Terminal.app">Terminal application</a> or <em>console</em> gives us access to the Unix command line, or <em>shell</em>. We call the command line the shell because it is the outer layer of the operating system&#39;s internal mechanisms (which we call the kernel). Search for the macOS Terminal application by pressing the Command-Spacebar combination (which Apple calls &quot;Spotlight Search&quot;) and searching for &quot;Terminal.&quot; Or look in the <strong>Applications/Utilities/</strong> folder for the Terminal application.</p>
+
+<p>You&#39;ll also need a text editor (typically <a href="https://code.visualstudio.com/">VS Code</a> or <a href="https://atom.io/">Atom</a>) to configure your Mac (and for writing code).</p>
+
+<p>Launch the Terminal application. Then try out the terminal application by entering a shell command:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>whoami
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p><code>$ whoami</code></p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Don&#39;t type the <code>$</code> character. The <code>$</code> character is a cue that you should enter a shell command. This is a longtime convention that indicates you should enter a command in the terminal application. The Unix shell command <code>whoami</code> returns your username.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Just a reminder to absolute beginners: Press &quot;Enter&quot; after you type the command.</p>
+<h3 id='is-xcode-already-installed'>Is Xcode Already Installed?</h3>
+<p>You need to install Apple&#39;s <a href="http://railsapps.github.io/xcode-command-line-tools.html">Xcode Command Line Tools</a> to get the Unix tools needed to install Ruby and develop with Rails. Xcode is Apple&#39;s software library for macOS developers. You don&#39;t need all of Xcode for Rails development. You just need the Xcode Command Line Tools. Only install the full Xcode package if you are doing development of applications for the Apple operating systems.</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<p>Check if you have previously installed the full Xcode package:</p>
+<pre class="highlight plaintext"><code>$ xcode-select -p
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<p><code>$ xcode-select -p</code></p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>If you see:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><code>xcode-select: error: unable to get active developer directory...</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p>The Xcode package is not installed. Jump to the next section and install only the Xcode Command Line Tools.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p>If you see:</p>
+
+<p><code>/Library/Developer/CommandLineTools</code></p>
+
+<p>You&#39;re done. The Xcode Command Line Tools are installed and you can skip ahead to install Homebrew.</p>
+
+<p>If you see:</p>
+
+<p><code>/Applications/Xcode.app/Contents/Developer</code></p>
+
+<p>The full Xcode package is already installed. Maybe you or someone else installed it previously. If Xcode is installed, you will need to update Xcode to the newest version (Xcode 11 or newer). Go to the App Store application and check &quot;Updates.&quot; After updating Xcode, be sure to launch the Xcode application and accept the Apple license terms.</p>
+
+<p>If you see a file location that contains spaces in the path:</p>
+
+<p><code>/Applications/Apple Dev Tools/Xcode.app/Contents/Developer</code></p>
+
+<p>you will have problems installing Ruby. You should delete and reinstall Xcode.</p>
+<h3 id='install-xcode-command-line-tools'>Install Xcode Command Line Tools</h3>
+<p>The Xcode Command Line Tools provide a C language compiler needed to install Ruby. For many Rails projects, you will need the C language compiler to install gems that use native extensions (such as Nokogiri).</p>
+
+<p>Here&#39;s how to install Apple&#39;s Xcode Command Line Tools.</p>
+
+<p>MacOS Catalina will alert you when you enter a command in the terminal that requires Xcode Command Line Tools. For example, you can enter <code>gcc</code>, <code>git</code>, or <code>make</code>.</p>
+
+<p>Try it. Enter:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gcc
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p><code>$ gcc</code></p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>If Xcode Command Line Tools are not installed, you&#39;ll see an alert box:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><img src="https://railsapps.github.io/images/installing-mavericks-popup.png" title="alert Xcode Command Line Tools is required" alt="alert Xcode Command Line Tools is required" /></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p><em>Note: The alert box has changed in macOS Catalina. It now just shows &quot;Cancel&quot; and &quot;Install&quot;</em></p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p>Alternatively, you can use a command to install Xcode Command Line Tools. It will produce a similar alert box. Note the double hyphen:</p>
+
+<p><code>$ xcode-select --install</code></p>
+
+<p>Click &quot;Install&quot; to download and install Xcode Command Line Tools. If you have a slow Internet connection, it may take many minutes.</p>
+
+<p>If the download takes a very long time (over an hour) or fails, you can try an alternative. Go to <a href="https://developer.apple.com/downloads/more">https://developer.apple.com/downloads/more</a> and enter your Apple ID and password. You&#39;ll see a list of software packages you can download. Look for the latest version of <em>Command Line Tools</em> and click to download the <em>.dmg</em> file. Downloading the <em>.dmg</em> file is much faster than waiting for the command-line-based download. Install the <em>.dmg</em> file by clicking on the package icon. You&#39;ll need about 1.3GB of storage on your computer.</p>
+
+<p><img src="https://railsapps.github.io/images/installing-mavericks-download.png" title="downloading Xcode Command Line Tools" alt="downloading Xcode Command Line Tools" /></p>
+
+<p><img src="https://railsapps.github.io/images/imstalling-mavericks-installed.png" title="installed Xcode Command Line Tools" alt="installed Xcode Command Line Tools" /></p>
+
+<p>Verify that you&#39;ve successfully installed Xcode Command Line Tools.</p>
+<pre class="highlight plaintext"><code>$ xcode-select -p
+/Library/Developer/CommandLineTools
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+<p><code>$ xcode-select -p</code></p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>The Xcode Command Line Tools must be installed before you go to the next steps. Just to be certain, verify that the Command Line Tools executables are available:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>/usr/sbin/pkgutil --packages | grep CL
+com.apple.pkg.CLTools_Executables
+com.apple.pkg.CLTools_SDK_macOS1015
+com.apple.pkg.CLTools_SDK_OSX1014
+com.apple.pkg.CLTools_SDK_macOS_SDK
+<span class="gp">$ </span>/usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables
+package-id: com.apple.pkg.CLTools_Executables
+version: 11.3.1.0.1.15676735732
+volume: /
+location: /
+install-time: 1525925856
+groups: com.apple.FindSystemFiles.pkg-group
+</code></pre>
+<p><code>$ /usr/sbin/pkgutil --packages | grep CL</code></p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<p><code>$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables</code></p>
+
+<p>If the Command Line Tools executables are available, you&#39;ll have no problem compiling Nokogiri or any other gems that require native extensions.</p>
+<h2 id='install-homebrew'>Install Homebrew</h2>
+<p>Developers use Homebrew to install various Unix software packages, including <a href="https://github.com/postmodern/chruby">chruby</a> and <a href="https://github.com/postmodern/ruby-install">ruby-install</a>.</p>
+
+<p>If you did not use a password to log in to your Mac (that is, if your password is blank), you cannot install Homebrew.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>brew
+zsh: brew: <span class="nb">command </span>not found
+</code></pre>
+<p><code>$ brew</code></p>
+
+<p>Check if Homebrew is installed.</p>
+
+<p>If Homebrew is not installed, install it.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>/bin/bash -c <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">"</span>
+</code></pre>
+<p><code>$ /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;</code></p>
+
+<p>The Homebrew installation script will ask you to enter your Mac password.</p>
+
+<p><code>Password:</code></p>
+
+<p>The Homebrew installation script may display a warning:</p>
+
+<p><code>WARNING: Improper use of the sudo command could lead to data loss...</code></p>
+
+<p><code>To proceed, enter your password...</code></p>
+
+<p>Ignore the scary warning and enter your Mac password. You won&#39;t see the characters as you type. Press enter when you are done.</p>
+
+<p>If you&#39;ve installed Homebrew, you can check that Homebrew is installed properly.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>brew doctor
+Your system is ready to brew.
+</code></pre>
+<p><code>$ brew doctor</code></p>
+
+<p>Next we&#39;ll configure Git, an essential tool for any developer.</p>
+<h2 id='configure-git'>Configure Git</h2>
+<p>Before installing Ruby on Rails, you should configure Git. Git is automatically installed as part of the Xcode Command Line Tools.</p>
+
+<p><a href="http://git-scm.com/">Git</a> provides a source control repository. Developers use Git to roll back code changes when needed, to collaborate with others, and deploy applications for hosting with a service such as Heroku. As a Rails developer, you&#39;ll use Git with a <a href="https://github.com/">GitHub</a> account for remote backup and collaboration. See the article <a href="http://railsapps.github.io/rails-git.html">Rails with Git and GitHub</a> for more background.</p>
+
+<p>Before you configure Git, it is a good idea to <a href="https://help.github.com/articles/signing-up-for-a-new-github-account/">create an account on GitHub</a>. It is important to use the same email address for Git and for GitHub. After you create an account on GitHub, follow their instructions to <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">set up an SSH key</a> so you don&#39;t have to enter a username and password every time you connect to GitHub from the Terminal.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>git version
+git version 2.21.1 <span class="o">(</span>Apple Git-122.3<span class="o">)</span>
+</code></pre>
+<p>Check that Git is installed:</p>
+
+<p><code>
+$ git version
+</code></p>
+
+<p>You should see <code>git version 2.21.1</code> (or newer).</p>
+
+<p>If the Git version installed with Xcode Command Line Tools is old, you can use Homebrew to install the latest version of Git:  </p>
+
+<p><code>
+$ brew install git
+</code></p>
+
+<p>You can use Homebrew to upgrade to the newest version of Git:</p>
+
+<p><code>
+$ brew upgrade git
+</code></p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>git config -l --global
+fatal: unable to <span class="nb">read </span>config file <span class="s1">'/Users/.../.gitconfig'</span>: No such file or directory
+<span class="gp">$ </span>git config --global user.name <span class="s2">"Your Real Name"</span>
+<span class="gp">$ </span>git config --global user.email me@example.com
+<span class="gp">$ </span>git config -l --global
+user.name<span class="o">=</span>Your Real Name
+user.email<span class="o">=</span>me@example.com
+</code></pre>
+<p>Configure Git if you haven&#39;t used it before. First, list the current settings with the <code>git config -l --global</code> command. Then set <code>user.name</code> and <code>user.email</code> if necessary. Don&#39;t just copy and paste the code you see here. Edit it to add your name and the email address you&#39;ve used for GitHub.</p>
+
+<p>Now you&#39;ll be ready to use Git when you need it.</p>
+<h2 id='install-ruby-install-and-chruby'>Install Ruby-install and Chruby</h2><pre class="highlight shell tab-shell"><code><span class="gp">$ </span>brew install ruby-install chruby
+<span class="gp">==&gt; </span>Downloading https://homebrew.bintray.com/bottles/ruby-install-0.6.1.sierra.b
+<span class="c">######################################################################## 100.0%</span>
+<span class="gp">==&gt; </span>Pouring ruby-install-0.6.1.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/ruby-install/0.6.1: 27 files, 67.6KB
+<span class="gp">==&gt; </span>Downloading https://homebrew.bintray.com/bottles/chruby-0.3.9.sierra.bottle.
+<span class="c">######################################################################## 100.0%</span>
+<span class="gp">==&gt; </span>Pouring chruby-0.3.9.sierra.bottle.tar.gz
+<span class="gp">==&gt; </span>Caveats
+Add the following to the ~/.bash_profile or ~/.zshrc file:
+  <span class="nb">source</span> /usr/local/opt/chruby/share/chruby/chruby.sh
+
+To <span class="nb">enable </span>auto-switching of Rubies specified by .ruby-version files,
+add the following to ~/.bash_profile or ~/.zshrc:
+  <span class="nb">source</span> /usr/local/opt/chruby/share/chruby/auto.sh
+<span class="gp">==&gt; </span>Summary
+🍺  /usr/local/Cellar/chruby/0.3.9: 11 files, 50.0KB
+</code></pre>
+<p>Use Homebrew to install the <a href="https://github.com/postmodern/ruby-install">ruby-install</a> utility and the <a href="https://github.com/postmodern/chruby">chruby</a> Ruby version manager.</p>
+
+<p><code>$ brew install ruby-install chruby</code></p>
+
+<p>You&#39;ll see beer mug emojis (part of the <a href="https://en.wikipedia.org/wiki/Emoji">Emoji 1.0</a> standard released in 2015).</p>
+<h3 id='configure-chruby'>Configure Chruby</h3>
+<p>You must update your Unix <em>.zshrc</em> file so that the chruby program can be found.</p>
+
+<p>The <em>.zshrc</em> file is in your user home folder. It is hidden in the file browser. You can enter Command + Shift + . to show hidden files. If you want to hide those files again, you can enter the same keystrokes.</p>
+
+<p>You can force the Mac to always display hidden files by entering the following command in the Terminal application:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder
+</code></pre>
+<p><code>$ defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder</code></p>
+
+<p>Hidden files will appear in gray in the Finder window.</p>
+
+<p>Use your text editor (typically <a href="https://code.visualstudio.com/">VS Code</a>or <a href="https://atom.io/">Atom</a>) to open the <em>.zshrc</em> file. Check the instructions for your text editor to learn how to open files from the terminal. In VS Code, open the Command Palette (⇧⌘P) and type &#39;shell command&#39; to locate and click &quot;Shell Command: Install &#39;code&#39; command in PATH command.&quot;</p>
+
+<p>To open the <em>.zshrc</em> file with VS Code:</p>
+
+<p><code>$ code ~/.zshrc</code></p>
+
+<p>In Unix, the squiggle (tilde) character is a shortcut to your user home folder.</p>
+
+<p>Add two lines anywhere in your <em>.zshrc</em> file. Your <em>.zshrc</em> file may not exist (or may be empty) if you have not used it before. Saving the file will create it.</p>
+<pre class="highlight shell tab-shell"><code><span class="c">### ~/.zshrc</span>
+<span class="nb">source</span> /usr/local/share/chruby/chruby.sh
+<span class="nb">source</span> /usr/local/share/chruby/auto.sh
+</code></pre>
+<p><code>source /usr/local/share/chruby/chruby.sh</code></p>
+
+<p><code>source /usr/local/share/chruby/auto.sh</code></p>
+
+<p>The first line makes the chruby program available in the shell. The second line will automatically switch the current version of Ruby when you change directories if a hidden file indicates a specific Ruby version.</p>
+
+<p>You must close and reopen the Terminal window for the changes to the <em>.zshrc</em> file to be recognized.</p>
+
+<p>Check that each program was installed successfully.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>ruby-install -V
+ruby-install: 0.7.0
+<span class="gp">$ </span>chruby -h
+usage: chruby <span class="o">[</span>RUBY|VERSION|system] <span class="o">[</span>RUBYOPT...]
+</code></pre>
+<p><code>$ ruby-install -V</code></p>
+
+<p><code>$ chruby -h</code></p>
+
+<p>Now you can install the newest Ruby version.</p>
+<h2 id='install-ruby'>Install Ruby</h2>
+<p>After installing the ruby-install utility, install the newest version of Ruby.</p>
+
+<p>The Chruby version manager will use your shell to intercept any calls to Ruby. There&#39;s no need to remove the system Ruby. The system Ruby will remain on your system and your preferred version will take precedence.</p>
+
+<p>You can check for the current <a href="http://www.ruby-lang.org/en/downloads/">recommended version of Ruby</a>. Tell the ruby-install utility to check for the newest Ruby version.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>ruby-install --latest
+</code></pre>
+<p><code>$ ruby-install --latest</code></p>
+
+<p>Then install the newest Ruby version.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>ruby-install --latest ruby
+</code></pre>
+<p><code>$ ruby-install --latest ruby</code></p>
+
+<p>Add a line to the  <em>.zshrc</em> file to set the new Ruby version as a default.</p>
+
+<p><code>chruby ruby-2.7.0</code></p>
+
+<p>You&#39;ll need to close and re-open the terminal window. </p>
+
+<p>Then verify that the newest version of Ruby is installed:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>ruby -v
+ruby 2.7.0...
+</code></pre>
+<p><code>$ ruby -v</code></p>
+
+<p>Now you can update the development environment. It is likely some gems have been updated since the newest version of Ruby was released. It&#39;s best if everything is up to date before you start a new project.</p>
+<h2 id='check-the-gem-manager'>Check the Gem Manager</h2>
+<p><a href="https://rubygems.org/gems/rubygems-update">RubyGems</a> is the package manager in Ruby. We use it to install software packages that add functionality to Ruby.</p>
+
+<p>Check the installed gem manager version.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem -v
+3.1.2
+</code></pre>
+<p><code>$ gem -v</code></p>
+
+<p>You can check if a <a href="https://rubygems.org/gems/rubygems-update">newer RubyGems</a> version is available. Use <code>gem update --system</code> to upgrade the Ruby gem manager:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem update --system
+</code></pre>
+<p><code>$ gem update --system</code></p>
+<h3 id='faster-gem-installation'>Faster Gem Installation</h3>
+<p>By default, when you install gems, documentation files will be installed. Developers seldom use gem documentation files (they&#39;ll browse the web instead). Installing gem documentation files takes time, so many developers like to toggle the default so no documentation is installed.</p>
+
+<p>Here&#39;s how to speed up gem installation by disabling the documentation step:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"gem: --no-document"</span> &gt;&gt; ~/.gemrc
+</code></pre>
+<p><code>$ echo &quot;gem: --no-document&quot; &gt;&gt; ~/.gemrc</code></p>
+
+<p>This adds the line <code>gem: --no-document</code> to the hidden <strong>.gemrc</strong> file in your home directory.</p>
+<h3 id='install-nokogiri'>Install Nokogiri</h3>
+<p><a href="http://nokogiri.org/">Nokogiri</a> is a gem that is a dependency for many other gems. Nokogiri is a gem that requires compilation for your specific operating system. As such, if your system environment doesn&#39;t match Nokogiri&#39;s requirements, compilation of Nokogiri will fail. If your system is configured properly, you&#39;ll be able to compile Nokogiri. However, compilation takes time. Every time you install the Nokogiri gem, you&#39;ll wait (as long as five minutes).</p>
+
+<p>To save time, install the Nokogiri gem:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem install nokogiri
+</code></pre>
+<p><code>$ gem install nokogiri</code></p>
+
+<p>During installation, Nokogiri will display two lengthy messages in the console. It will also pause without displaying any progress for as long as five minutes. Don&#39;t assume installation has failed unless you see an error message or you&#39;ve waited more than ten minutes.</p>
+
+<p>If Nokogiri installation fails, it&#39;s likely your Xcode Command Line Tools are not installed correctly. Try installing the Xcode Command Line Tools from the Apple developer site, as described above in the section &quot;Install Xcode Command Line Tools.&quot; The maintainers of the node-gyp build tool have provided <a href="https://github.com/nodejs/node-gyp/blob/master/macOS_Catalina.md">Installation notes for macOS Catalina</a> that are very helpful in resolving Xcode Command Line Tools installation issues. The Nokogiri maintainers also provide instructions for <a href="https://nokogiri.org/tutorials/installing_nokogiri.html">Installing Nokogiri</a>.</p>
+<h2 id='install-rails'>Install Rails</h2>
+<p>Check for the <a href="http://rubygems.org/gems/rails">current version of Rails</a>. Rails 6.0.2 was current when this was written.</p>
+
+<p>You can install Rails into the current Ruby environment.</p>
+
+<p>Here are the options you have for installing Rails.</p>
+
+<p>If you want to install the current stable release:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem install rails
+</code></pre>
+<p><code>$ gem install rails</code></p>
+
+<p>If you want the newest beta version or release candidate, you can install with <code>--pre</code>.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem install rails --pre
+</code></pre>
+<p><code>$ gem install rails --pre</code></p>
+
+<p>Or you can get a specific version.</p>
+
+<p>For example, if you want the Rails 5.2.3 release:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>gem install rails --version<span class="o">=</span>5.2.3
+</code></pre>
+<p><code>$ gem install rails --version=5.2.3</code></p>
+
+<p>Verify that the correct version of Rails is installed:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>rails -v
+Rails 6.0.2
+</code></pre>
+<p><code>$ rails -v</code></p>
+
+<p><code>Rails 6.0.2</code></p>
+
+<p>Rails is now installed. If you want, you can close the Terminal window. Everything is installed, so you won&#39;t lose anything by closing the Terminal.</p>
+
+<p>Next, try building a Rails application.</p>
+<h2 id='create-a-workspace-folder'>Create a Workspace Folder</h2>
+<p>You&#39;ll need a convenient folder to store your Rails projects. You can give it any name, such as <strong>code/</strong> or <strong>projects/</strong>. For this tutorial, we&#39;ll call it <strong>workspace/</strong>.</p>
+
+<p>Create a projects folder and move into the folder:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>mkdir workspace
+<span class="gp">$ </span><span class="nb">cd </span>workspace
+</code></pre>
+<p><code>$ mkdir workspace</code></p>
+
+<p><code>$ cd workspace</code></p>
+
+<p>This is where you&#39;ll create your Rails applications.</p>
+<h2 id='new-rails-application'>New Rails Application</h2>
+<p>Here&#39;s how to create a new Rails application.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>rails new myapp
+</code></pre>
+<p><code>$ rails new myapp</code></p>
+
+<p>We&#39;ll name the new application &quot;myapp.&quot; Obviously, you can give it any name you like.</p>
+
+<p>The <code>rails new</code> command generates the default Rails starter app. If you wish, you can use the <a href="http://railsapps.github.io/rails-composer/">Rails Composer</a> tool to generate a starter application with a choice of basic features and popular gems.</p>
+<h3 id='quick-test'>Quick Test</h3>
+<p>For a &quot;smoke test&quot; to see if everything runs, display a list of Rake tasks.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span><span class="nb">cd </span>myapp
+<span class="gp">$ </span>rails -T
+</code></pre>
+<p><code>$ cd myapp</code></p>
+
+<p><code>$ rails -T</code></p>
+
+<p>Run the application with the Rails server command:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>rails server
+</code></pre>
+<p><code>$ rails server</code></p>
+
+<p>Use your web browser to visit the application at <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
+
+<p>Use Control-c to stop the server.</p>
+
+<p>This concludes the instructions for installing Ruby and Rails. Read on for additional advice and tips.</p>
+<h2 id='terminal-application-and-text-editor'>Terminal Application and Text Editor</h2>
+<p>The built-in Apple Terminal application is adequate but many developers install <a href="http://www.iterm2.com/#/section/home">iTerm 2</a>. It has more options for customization.</p>
+
+<p>For examining and writing code, you&#39;ll also need a text editor program such as <a href="https://code.visualstudio.com/">VS Code</a> or <a href="https://atom.io/">Atom</a>. Of course, some programmers will suggest you try Vim or Emacs.</p>
+<h2 id='rails-example-applications'>Rails Example Applications</h2>
+<p>If you&#39;d like to download and play with a complete, working Rails application, choose any of the <a href="http://railsapps.github.io/">RailsApps Example Applications</a>. For example, you can download the application that is built in the book, <a href="http://learn-rails.com/learn-ruby-on-rails.html"><em>Learn Ruby on Rails</em></a>. Make sure you are in your workspace folder, then download from GitHub and install gems using bundler:</p>
+
+<p><code>$ cd ~/workspace</code></p>
+
+<p><code>$ git clone https://github.com/RailsApps/learn-rails.git</code></p>
+
+<p><code>$ cd learn-rails</code></p>
+
+<p><code>$ bundle install --without production</code></p>
+
+<p>Examine the code or run the application:</p>
+
+<p><code>$ rails server</code></p>
+
+<p>The server will start and wait for requests from a web browser. You won&#39;t see a result or a prompt while it is waiting for a request from a web browser.</p>
+
+<p>Use your web browser to visit the application at <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
+
+<p>Use Control-c to stop the server.</p>
+<h2 id='rails-composer'>Rails Composer</h2>
+<p>Use the <a href="http://www.railscomposer.com">Rails Composer</a> tool to build a full-featured Rails starter app.</p>
+
+<p>You&#39;ll get a choice of starter applications with basic features and popular gems.</p>
+
+<p>Here&#39;s how to generate a new Rails application using the Rails Composer tool.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span><span class="nb">cd</span> ~/workspace
+<span class="gp">$ </span>rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+</code></pre>
+<p><code>$ cd ~/workspace</code></p>
+
+<p><code>$ rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb</code></p>
+
+<p>The <code>-m</code> option loads an application template that is hosted on GitHub.</p>
+
+<p>You can add the <code>-T</code> flags to skip Test::Unit if you are using RSpec for testing.</p>
+
+<p>You can add the <code>-O</code> flags to skip Active Record if you are using a NoSQL datastore such as MongoDB.</p>
+
+<p>If you get an error &quot;OpenSSL certificate verify failed&quot; when you try to generate a new Rails app, see the article <a href="http://railsapps.github.io/openssl-certificate-verify-failed.html">OpenSSL Errors and Rails</a>.</p>
+
+<p>You can run the Rails server to test the application.</p>
+<h2 id='databases-for-rails'>Databases for Rails</h2>
+<p>Rails uses the <a href="http://www.sqlite.org/">SQLite</a> database by default. MacOS come with SQLite pre-installed and there&#39;s nothing to configure.</p>
+
+<p>Though SQLite is adequate for development (and even some production applications), a new Rails application can be configured for other databases. The command <code>rails new myapp --database=</code> will show you a list of supported databases.</p>
+
+<p><code>Supported for preconfiguration are: mysql, oracle, postgresql, sqlite3, frontbase, ibm_db, sqlserver, jdbcmysql, jdbcsqlite3, jdbcpostgresql, jdbc.</code></p>
+<h3 id='postgresql'>PostgreSQL</h3>
+<p>Use the easy-to-install macOS <a href="http://postgresapp.com/">Postgres.app</a> if you&#39;d like to use PostgreSQL.</p>
+
+<p>To create a new Rails application to use <a href="http://www.postgresql.org/">PostgreSQL</a>:</p>
+
+<p><code>$ rails new myapp --database=postgresql</code></p>
+
+<p>The <code>--database=postgresql</code> parameter will add the pg database adapter gem to the Gemfile and create a suitable config/database.yml file.</p>
+
+<p>Don&#39;t use the <code>--database=</code> argument with the Rails Composer tool. You&#39;ll select a database from a menu instead.</p>
+<h2 id='deployment'>Deployment</h2>
+<p>Most developers deploy their applications with a &quot;platform as a service&quot; (PaaS) provider such as Heroku.</p>
+
+<ul>
+<li><a href="http://www.heroku.com/">Heroku</a></li>
+<li><a href="https://www.digitalocean.com/">DigitalOcean</a></li>
+<li><a href="http://www.engineyard.com/">EngineYard</a></li>
+<li><a href="https://aws.amazon.com/ec2/">Amazon AWS EC2</a></li>
+</ul>
+
+<p>See a helpful <a href="https://www.airpair.com/ruby-on-rails/posts/rails-host-comparison-aws-digitalocean-heroku-engineyard">comparison of Rails hosting services</a>.</p>
+
+<p>For deployment on Heroku, see the article:</p>
+
+<ul>
+<li><a href="https://guides.railsapps.org/rails-deploy-to-heroku.html">Rails Deploy to Heroku</a></li>
+</ul>
+<h2 id='security'>Security</h2>
+<p>By design, Rails encourages practices that avoid common web application vulnerabilities. The Rails security team actively investigates and patches vulnerabilities. If you use the most current version of Rails, you will be protected from known vulnerabilities. See the <a href="http://guides.rubyonrails.org/security.html">Ruby On Rails Security Guide</a> for an overview of potential issues and watch the <a href="https://groups.google.com/forum/?fromgroups#!forum/rubyonrails-security">Ruby on Rails Security Mailing List</a> for announcements and discussion.</p>
+<h3 id='your-application-39-s-secret-token'>Your Application&#39;s Secret Token</h3>
+<p>Rails uses a session store to provide persistence between page requests. The default session store uses cookies. To prevent decoding of cookie data and hijacking a session, Rails encrypts cookie data using a secret key. When you create a new Rails application using the <code>rails new</code> command, a unique secret key is generated. If you&#39;ve used the Rails Composer tool to generate the application, the application&#39;s secret token will be unique, just as with any Rails application generated with the <code>rails new</code> command.</p>
+
+<p>The file <strong>config/master.key</strong> contains a secret token used to decrypt credentials (and other encrypted files).</p>
+
+<p>Take care to hide the secret token you use in production. Don&#39;t expose it in a public GitHub repo, or people could change their session information, and potentially access your site without permission. It&#39;s best to set the secret token in a Unix shell variable.</p>
+
+<p>If you need to create a new secret token:</p>
+
+<p><code>$ rails secret</code></p>
+
+<p>The command <code>rake secret</code> generates a new random secret you can use. The command won&#39;t install the key; you have to copy the key from the console output to the appropriate file.</p>
+<h2 id='troubleshooting'>Troubleshooting</h2><h3 id='conflicting-bundler-versions'>Conflicting Bundler Versions</h3>
+<p>If you install a version of Bundler that is newer than the default installed with Ruby, you will get a message &quot;Warning: the running version of Bundler (2.1.2) is older than the version that created the lockfile (2.1.4)&quot; when you run a Rails command. You can avoid the warning by prepending <code>bundle exec</code>, for example <code>bundle exec rails -T</code>. It&#39;s not possible to remove a default gem  with <code>gem uninstall bundler</code> so it&#39;s advisable not to install a newer version of Bundler unless absolutely necesary.</p>
+<h3 id='problems-with-quot-gem-remotefetcher-fetcherror-ssl_connect-quot'>Problems with &quot;Gem::RemoteFetcher::FetchError: SSL_connect&quot;</h3>
+<p>Ruby and RubyGems (starting with Ruby 1.9.3p194 and RubyGems 1.8.23) require verification of server SSL certificates when Ruby makes an Internet connection via https. If you run <code>rails new</code> and get an error &quot;Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate&quot; see this article suggesting solutions: <a href="http://railsapps.github.io/openssl-certificate-verify-failed.html">OpenSSL errors and Rails</a>.</p>
+<h3 id='problems-with-quot-certificate-verify-failed-quot'>Problems with &quot;Certificate Verify Failed&quot;</h3>
+<p>Are you getting an error &quot;OpenSSL certificate verify failed&quot; when you try to generate a new Rails app from an application template? See this article suggesting solutions: <a href="http://railsapps.github.io/openssl-certificate-verify-failed.html">OpenSSL errors and Rails</a>.</p>
+<h3 id='installing-in-a-second-account'>Installing in a Second Account</h3>
+<p>If you&#39;ve created a second user account on your Mac, and the first user has already installed Homebrew, the first user may have to change permissions for the <strong>/usr/local/bin</strong> and <strong>/usr/local/Cellar</strong> folders:</p>
+
+<p><code>$ sudo chmod g+w /usr/local/bin</code></p>
+
+<p><code>$ sudo chmod g+w /usr/local/Cellar</code></p>
+
+<p>The second user account should be given admin privileges using the System Preferences &quot;Users and Groups&quot; setting.</p>
+<h2 id='where-to-get-help'>Where to Get Help</h2>
+<p>Your best source for online help with problems is <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">Stack Overflow</a>. Your issue may have been encountered and addressed by others.</p>
+
+<p>To find a real person who can help, attend a Ruby meetup in your city. Google for &quot;ruby meetup&quot; with your city name.</p>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
