@@ -51,6 +51,9 @@ under the License.
     <% end %>
     <!-- CommentBox Script -->
     <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script type="text/javascript">
+      commentBox('5746464923844608-proj');
+    </script>
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
