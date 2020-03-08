@@ -207,6 +207,8 @@
     <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
+    <!-- CommentBox Script -->
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
   </head>
 
   <body class="index" data-languages="[]">
@@ -270,12 +272,6 @@
                     <a href="#terminal-application-and-text-editor" class="toc-h2 toc-link" data-title="terminal-application-and-text-editor">Terminal Application and Text Editor</a>
                   </li>
                   <li>
-                    <a href="#rails-example-applications" class="toc-h2 toc-link" data-title="rails-example-applications">Rails Example Applications</a>
-                  </li>
-                  <li>
-                    <a href="#rails-composer" class="toc-h2 toc-link" data-title="rails-composer">Rails Composer</a>
-                  </li>
-                  <li>
                     <a href="#databases-for-rails" class="toc-h2 toc-link" data-title="databases-for-rails">Databases for Rails</a>
                   </li>
                   <li>
@@ -289,6 +285,9 @@
                   </li>
                   <li>
                     <a href="#where-to-get-help" class="toc-h2 toc-link" data-title="where-to-get-help">Where to Get Help</a>
+                  </li>
+                  <li>
+                    <a href="#comments" class="toc-h2 toc-link" data-title="comments">Comments</a>
                   </li>
               </ul>
           </li>
@@ -714,7 +713,7 @@ Rails 6.0.2
 
 <p>We&#39;ll name the new application &quot;myapp.&quot; Obviously, you can give it any name you like.</p>
 
-<p>The <code>rails new</code> command generates the default Rails starter app. If you wish, you can use the <a href="http://railsapps.github.io/rails-composer/">Rails Composer</a> tool to generate a starter application with a choice of basic features and popular gems.</p>
+<p>The <code>rails new</code> command generates the default Rails starter app.</p>
 <h3 id='quick-test'>Quick Test</h3>
 <p>For a &quot;smoke test&quot; to see if everything runs, display a list of Rake tasks.</p>
 <pre class="highlight shell tab-shell"><code><span class="gp">$ </span><span class="nb">cd </span>myapp
@@ -738,48 +737,6 @@ Rails 6.0.2
 <p>The built-in Apple Terminal application is adequate but many developers install <a href="http://www.iterm2.com/#/section/home">iTerm 2</a>. It has more options for customization.</p>
 
 <p>For examining and writing code, you&#39;ll also need a text editor program such as <a href="https://code.visualstudio.com/">VS Code</a> or <a href="https://atom.io/">Atom</a>. Of course, some programmers will suggest you try Vim or Emacs.</p>
-<h2 id='rails-example-applications'>Rails Example Applications</h2>
-<p>If you&#39;d like to download and play with a complete, working Rails application, choose any of the <a href="http://railsapps.github.io/">RailsApps Example Applications</a>. For example, you can download the application that is built in the book, <a href="http://learn-rails.com/learn-ruby-on-rails.html"><em>Learn Ruby on Rails</em></a>. Make sure you are in your workspace folder, then download from GitHub and install gems using bundler:</p>
-
-<p><code>$ cd ~/workspace</code></p>
-
-<p><code>$ git clone https://github.com/RailsApps/learn-rails.git</code></p>
-
-<p><code>$ cd learn-rails</code></p>
-
-<p><code>$ bundle install --without production</code></p>
-
-<p>Examine the code or run the application:</p>
-
-<p><code>$ rails server</code></p>
-
-<p>The server will start and wait for requests from a web browser. You won&#39;t see a result or a prompt while it is waiting for a request from a web browser.</p>
-
-<p>Use your web browser to visit the application at <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
-
-<p>Use Control-c to stop the server.</p>
-<h2 id='rails-composer'>Rails Composer</h2>
-<p>Use the <a href="http://www.railscomposer.com">Rails Composer</a> tool to build a full-featured Rails starter app.</p>
-
-<p>You&#39;ll get a choice of starter applications with basic features and popular gems.</p>
-
-<p>Here&#39;s how to generate a new Rails application using the Rails Composer tool.</p>
-<pre class="highlight shell tab-shell"><code><span class="gp">$ </span><span class="nb">cd</span> ~/workspace
-<span class="gp">$ </span>rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
-</code></pre>
-<p><code>$ cd ~/workspace</code></p>
-
-<p><code>$ rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb</code></p>
-
-<p>The <code>-m</code> option loads an application template that is hosted on GitHub.</p>
-
-<p>You can add the <code>-T</code> flags to skip Test::Unit if you are using RSpec for testing.</p>
-
-<p>You can add the <code>-O</code> flags to skip Active Record if you are using a NoSQL datastore such as MongoDB.</p>
-
-<p>If you get an error &quot;OpenSSL certificate verify failed&quot; when you try to generate a new Rails app, see the article <a href="http://railsapps.github.io/openssl-certificate-verify-failed.html">OpenSSL Errors and Rails</a>.</p>
-
-<p>You can run the Rails server to test the application.</p>
 <h2 id='databases-for-rails'>Databases for Rails</h2>
 <p>Rails uses the <a href="http://www.sqlite.org/">SQLite</a> database by default. MacOS come with SQLite pre-installed and there&#39;s nothing to configure.</p>
 
@@ -794,8 +751,6 @@ Rails 6.0.2
 <p><code>$ rails new myapp --database=postgresql</code></p>
 
 <p>The <code>--database=postgresql</code> parameter will add the pg database adapter gem to the Gemfile and create a suitable config/database.yml file.</p>
-
-<p>Don&#39;t use the <code>--database=</code> argument with the Rails Composer tool. You&#39;ll select a database from a menu instead.</p>
 <h2 id='deployment'>Deployment</h2>
 <p>Most developers deploy their applications with a &quot;platform as a service&quot; (PaaS) provider such as Heroku.</p>
 
@@ -816,7 +771,7 @@ Rails 6.0.2
 <h2 id='security'>Security</h2>
 <p>By design, Rails encourages practices that avoid common web application vulnerabilities. The Rails security team actively investigates and patches vulnerabilities. If you use the most current version of Rails, you will be protected from known vulnerabilities. See the <a href="http://guides.rubyonrails.org/security.html">Ruby On Rails Security Guide</a> for an overview of potential issues and watch the <a href="https://groups.google.com/forum/?fromgroups#!forum/rubyonrails-security">Ruby on Rails Security Mailing List</a> for announcements and discussion.</p>
 <h3 id='your-application-39-s-secret-token'>Your Application&#39;s Secret Token</h3>
-<p>Rails uses a session store to provide persistence between page requests. The default session store uses cookies. To prevent decoding of cookie data and hijacking a session, Rails encrypts cookie data using a secret key. When you create a new Rails application using the <code>rails new</code> command, a unique secret key is generated. If you&#39;ve used the Rails Composer tool to generate the application, the application&#39;s secret token will be unique, just as with any Rails application generated with the <code>rails new</code> command.</p>
+<p>Rails uses a session store to provide persistence between page requests. The default session store uses cookies. To prevent decoding of cookie data and hijacking a session, Rails encrypts cookie data using a secret key. When you create a new Rails application using the <code>rails new</code> command, a unique secret key is generated.</p>
 
 <p>The file <strong>config/master.key</strong> contains a secret token used to decrypt credentials (and other encrypted files).</p>
 
@@ -845,6 +800,8 @@ Rails 6.0.2
 <p>Your best source for online help with problems is <a href="http://stackoverflow.com/questions/tagged/ruby-on-rails">Stack Overflow</a>. Your issue may have been encountered and addressed by others.</p>
 
 <p>To find a real person who can help, attend a Ruby meetup in your city. Google for &quot;ruby meetup&quot; with your city name.</p>
+<h2 id='comments'>Comments</h2>
+<div class="commentbox"></div>
 
       </div>
       <div class="dark-box">
