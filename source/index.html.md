@@ -654,6 +654,6 @@ Your best source for online help with problems is [Stack Overflow](http://stacko
 
 To find a real person who can help, attend a Ruby meetup in your city. Google for "ruby meetup" with your city name.
 
-## Comments
+## Comments by CommentBox
 
 <div class="commentbox"></div>
