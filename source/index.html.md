@@ -14,7 +14,9 @@ search: true
 
 # Install Ruby on Rails 6.0 · macOS
 
-### by [Daniel Kehoe](https://danielkehoe.com/)
+### by Daniel Kehoe
+
+_See the author's blog at [danielkehoe.com](https://danielkehoe.com/)_
 
 _Last updated 8 March 2020_
 
