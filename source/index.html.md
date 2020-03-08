@@ -536,7 +536,7 @@ $ rails new myapp
 
 We'll name the new application "myapp." Obviously, you can give it any name you like.
 
-The `rails new` command generates the default Rails starter app. If you wish, you can use the [Rails Composer](http://railsapps.github.io/rails-composer/) tool to generate a starter application with a choice of basic features and popular gems.
+The `rails new` command generates the default Rails starter app.
 
 ### Quick Test
 
@@ -571,55 +571,6 @@ The built-in Apple Terminal application is adequate but many developers install 
 
 For examining and writing code, you'll also need a text editor program such as [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/). Of course, some programmers will suggest you try Vim or Emacs.
 
-## Rails Example Applications
-
-If you'd like to download and play with a complete, working Rails application, choose any of the [RailsApps Example Applications](http://railsapps.github.io/). For example, you can download the application that is built in the book, [_Learn Ruby on Rails_](http://learn-rails.com/learn-ruby-on-rails.html). Make sure you are in your workspace folder, then download from GitHub and install gems using bundler:
-
-`$ cd ~/workspace`
-
-`$ git clone https://github.com/RailsApps/learn-rails.git`
-
-`$ cd learn-rails`
-
-`$ bundle install --without production`
-
-Examine the code or run the application:
-
-`$ rails server`
-
-The server will start and wait for requests from a web browser. You won't see a result or a prompt while it is waiting for a request from a web browser.
-
-Use your web browser to visit the application at [http://localhost:3000/](http://localhost:3000/).
-
-Use Control-c to stop the server.
-
-## Rails Composer
-
-Use the [Rails Composer](http://www.railscomposer.com) tool to build a full-featured Rails starter app.
-
-You'll get a choice of starter applications with basic features and popular gems.
-
-Here's how to generate a new Rails application using the Rails Composer tool.
-
-```shell
-$ cd ~/workspace
-$ rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
-```
-
-`$ cd ~/workspace`
-
-`$ rails new myapp2 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb`
-
-The `-m` option loads an application template that is hosted on GitHub.
-
-You can add the `-T` flags to skip Test::Unit if you are using RSpec for testing.
-
-You can add the `-O` flags to skip Active Record if you are using a NoSQL datastore such as MongoDB.
-
-If you get an error "OpenSSL certificate verify failed" when you try to generate a new Rails app, see the article [OpenSSL Errors and Rails](http://railsapps.github.io/openssl-certificate-verify-failed.html).
-
-You can run the Rails server to test the application.
-
 ## Databases for Rails
 
 Rails uses the [SQLite](http://www.sqlite.org/) database by default. MacOS come with SQLite pre-installed and there's nothing to configure.
@@ -637,8 +588,6 @@ To create a new Rails application to use [PostgreSQL](http://www.postgresql.org/
 `$ rails new myapp --database=postgresql`
 
 The `--database=postgresql` parameter will add the pg database adapter gem to the Gemfile and create a suitable config/database.yml file.
-
-Don't use the `--database=` argument with the Rails Composer tool. You'll select a database from a menu instead.
 
 ## Deployment
 
@@ -661,7 +610,7 @@ By design, Rails encourages practices that avoid common web application vulnerab
 
 ### Your Application's Secret Token
 
-Rails uses a session store to provide persistence between page requests. The default session store uses cookies. To prevent decoding of cookie data and hijacking a session, Rails encrypts cookie data using a secret key. When you create a new Rails application using the `rails new` command, a unique secret key is generated. If you've used the Rails Composer tool to generate the application, the application's secret token will be unique, just as with any Rails application generated with the `rails new` command.
+Rails uses a session store to provide persistence between page requests. The default session store uses cookies. To prevent decoding of cookie data and hijacking a session, Rails encrypts cookie data using a secret key. When you create a new Rails application using the `rails new` command, a unique secret key is generated.
 
 The file **config/master.key** contains a secret token used to decrypt credentials (and other encrypted files).
 
@@ -702,3 +651,7 @@ The second user account should be given admin privileges using the System Prefer
 Your best source for online help with problems is [Stack Overflow](http://stackoverflow.com/questions/tagged/ruby-on-rails). Your issue may have been encountered and addressed by others.
 
 To find a real person who can help, attend a Ruby meetup in your city. Google for "ruby meetup" with your city name.
+
+## Comments
+
+<div class="commentbox"></div>
