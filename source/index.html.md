@@ -14,9 +14,9 @@ search: true
 
 # Install Ruby on Rails 6.0 · macOS
 
-### by Daniel Kehoe
+### by [Daniel Kehoe](https://danielkehoe.com/)
 
-_Last updated 6 March 2020_
+_Last updated 8 March 2020_
 
 > This is an article from the RailsApps project. The [RailsApps project](http://railsapps.github.io/) provides [Rails Example Applications](http://railsapps.github.io/) that developers use as starter apps.
 
