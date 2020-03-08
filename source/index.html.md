@@ -656,4 +656,6 @@ To find a real person who can help, attend a Ruby meetup in your city. Google fo
 
 ## Comments by CommentBox
 
+Have a problem with Ruby on Rails installation? Got a suggestion for others?
+
 <div class="commentbox"></div>
