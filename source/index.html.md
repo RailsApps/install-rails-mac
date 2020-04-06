@@ -24,7 +24,7 @@ _Last updated 8 March 2020_
 
 Install Ruby on Rails 6.0 on macOS 10.15 Catalina. Up-to-date and detailed instructions, plus troubleshooting, for the Rails newest release. How to set up and install Rails 6.0, the newest version of Rails, on macOS 10.15 Catalina.
 
-This is the most complete and up-to-date installation guide for Ruby on Rails on macOS and a favorite of Rails developers. It explains how to set up a development environment for Rails, the same used by any professional Rails developer.
+The most complete and up-to-date installation guide for Ruby on Rails on macOS and a favorite of Rails developers. It explains how to set up a development environment for Rails, the same used by any professional Rails developer.
 
 ### If You Are New to Rails
 
