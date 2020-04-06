@@ -18,7 +18,7 @@ search: true
 
 _See the author's blog at [danielkehoe.com](https://danielkehoe.com/)_
 
-_Last updated 8 March 2020_
+_Last updated 6 April 2020_
 
 > This is an article from the RailsApps project. The [RailsApps project](http://railsapps.github.io/) provides [Rails Example Applications](http://railsapps.github.io/) that developers use as starter apps.
 
