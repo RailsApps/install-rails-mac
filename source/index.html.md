@@ -1,5 +1,5 @@
 ---
-title: Install Ruby on Rails 6.0 · Mac · How To Guide · Daniel Kehoe
+title: Install Ruby on Rails 6.0 · Mac · Complete Guide
 
 language_tabs: # must be one of https://git.io/vQNgJ
 
