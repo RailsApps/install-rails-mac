@@ -18,7 +18,7 @@ search: true
 
 _See the author's blog at [danielkehoe.com](https://danielkehoe.com/)_
 
-_Last updated 6 April 2020_
+_Last updated 16 May 2020_
 
 > This is an article from the RailsApps project. The [RailsApps project](http://railsapps.github.io/) provides [Rails Example Applications](http://railsapps.github.io/) that developers use as starter apps.
 
@@ -56,7 +56,7 @@ These instructions are for macOS Catalina 10.15.
 
 ### If You Updated to macOS Catalina
 
-If you updated to Catalina from an earlier version of macOS (sometimes called an "over the top" installation), and you previously installed a Rails development environment, your earlier installation remains intact. You will need to [install the new version of Xcode Command Line Tools](http://railsapps.github.io/xcode-command-line-tools.html) (full instructions below). Though Rails is still intact after an update, read through this article and take this opportunity to update your development environment.
+If you updated to Catalina from an earlier version of macOS (sometimes called an "over the top" installation), and you previously installed a Rails development environment, your earlier installation remains intact. You will need to install the new version of Xcode Command Line Tools (full instructions below). Though Rails is still intact after an update, read through this article and take this opportunity to update your development environment.
 
 ### Upgrade macOS to Catalina
 
@@ -101,23 +101,73 @@ $ xcode-select -p
 
 `$ xcode-select -p`
 
+#### Scenario 1
+
 If you see:
 
 `xcode-select: error: unable to get active developer directory...`
 
 The Xcode package is not installed. Jump to the next section and install only the Xcode Command Line Tools.
 
-If you see:
-
-`/Library/Developer/CommandLineTools`
-
-You're done. The Xcode Command Line Tools are installed and you can skip ahead to install Homebrew.
+#### Scenario 2
 
 If you see:
 
 `/Applications/Xcode.app/Contents/Developer`
 
-The full Xcode package is already installed. Maybe you or someone else installed it previously. If Xcode is installed, you will need to update Xcode to the newest version (Xcode 11 or newer). Go to the App Store application and check "Updates." After updating Xcode, be sure to launch the Xcode application and accept the Apple license terms.
+The full Xcode package is already installed. Perhaps you installed it previously. If Xcode is installed, you will need to update Xcode to the newest version (Xcode 11 or newer). Go to the App Store application and check "Updates." After updating Xcode, be sure to launch the Xcode application and accept the Apple license terms.
+
+#### Scenario 3
+
+If you see:
+
+`/Library/Developer/CommandLineTools`
+
+The Xcode Command Line Tools may be installed _or an older version_ is installed. Here's how to test:
+
+```
+$ /usr/sbin/pkgutil --packages | grep CL
+com.apple.pkg.CLTools_Executables
+com.apple.pkg.CLTools_SDK_macOS1015
+com.apple.pkg.CLTools_SDK_macOS1014
+com.apple.pkg.CLTools_macOS_SDK
+```
+
+`$ /usr/sbin/pkgutil --packages | grep CL`
+
+You should see:
+
+`com.apple.pkg.CLTools_Executables`
+
+```
+$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables
+package-id: com.apple.pkg.CLTools_Executables
+version: 11.4.1.0.1.1586360307
+volume: /
+location: /
+install-time: 1589603645
+groups: com.apple.FindSystemFiles.pkg-group 
+```
+
+Also try:
+
+`/usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables`
+
+You should see:
+
+`package-id: com.apple.pkg.CLTools_Executables`
+
+If you get a response from the test, you're done. The Xcode Command Line Tools are installed and you can skip ahead to install Homebrew.
+
+If you get no response from the test, you have an older version of Xcode Command Line Tools and you must remove it.
+
+Remove the old version:
+
+`$ sudo rm -rf /Library/Developer/CommandLineTools`
+
+You are using `sudo` for admin access so you must enter the password you use to log in to your computer (you will not see the password after entering it). After removing the old version, jump to the next section and install the Xcode Command Line Tools.
+
+#### Scenario 4
 
 If you see a file location that contains spaces in the path:
 
@@ -143,9 +193,7 @@ $ gcc
 
 If Xcode Command Line Tools are not installed, you'll see an alert box:
 
-![alert Xcode Command Line Tools is required](https://railsapps.github.io/images/installing-mavericks-popup.png "alert Xcode Command Line Tools is required")
-
-*Note: The alert box has changed in macOS Catalina. It now just shows "Cancel" and "Install"*
+![alert Xcode Command Line Tools is required](installing-catalina-popup.png "alert Xcode Command Line Tools is required")
 
 Alternatively, you can use a command to install Xcode Command Line Tools. It will produce a similar alert box. Note the double hyphen:
 
@@ -153,7 +201,7 @@ Alternatively, you can use a command to install Xcode Command Line Tools. It wil
 
 Click "Install" to download and install Xcode Command Line Tools. If you have a slow Internet connection, it may take many minutes.
 
-If the download takes a very long time (over an hour) or fails, you can try an alternative. Go to [https://developer.apple.com/downloads/more](https://developer.apple.com/downloads/more) and enter your Apple ID and password. You'll see a list of software packages you can download. Look for the latest version of _Command Line Tools_ and click to download the _.dmg_ file. Downloading the _.dmg_ file is much faster than waiting for the command-line-based download. Install the _.dmg_ file by clicking on the package icon. You'll need about 1.3GB of storage on your computer.
+If the download takes a very long time (over an hour) or fails, you can try an alternative. Go to [https://developer.apple.com/downloads/more](https://developer.apple.com/downloads/more) and enter your Apple ID and password. You'll see a list of software packages you can download. Look for the latest version of _Command Line Tools_ and click to download the _.dmg_ file. Downloading the _.dmg_ file is much faster than waiting for the command-line-based download. Install the _.dmg_ file by clicking on the package icon. You'll need about 1.46GB of storage on your computer.
 
 ![downloading Xcode Command Line Tools](https://railsapps.github.io/images/installing-mavericks-download.png "downloading Xcode Command Line Tools")
 
@@ -168,26 +216,43 @@ $ xcode-select -p
 
 `$ xcode-select -p`
 
+You should see:
+
+`/Library/Developer/CommandLineTools`
+
 The Xcode Command Line Tools must be installed before you go to the next steps. Just to be certain, verify that the Command Line Tools executables are available:
 
-```shell
+```
 $ /usr/sbin/pkgutil --packages | grep CL
 com.apple.pkg.CLTools_Executables
 com.apple.pkg.CLTools_SDK_macOS1015
-com.apple.pkg.CLTools_SDK_OSX1014
-com.apple.pkg.CLTools_SDK_macOS_SDK
-$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables
-package-id: com.apple.pkg.CLTools_Executables
-version: 11.3.1.0.1.15676735732
-volume: /
-location: /
-install-time: 1525925856
-groups: com.apple.FindSystemFiles.pkg-group
+com.apple.pkg.CLTools_SDK_macOS1014
+com.apple.pkg.CLTools_macOS_SDK
 ```
 
 `$ /usr/sbin/pkgutil --packages | grep CL`
 
-`$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables`
+You should see:
+
+`com.apple.pkg.CLTools_Executables`
+
+```
+$ /usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables
+package-id: com.apple.pkg.CLTools_Executables
+version: 11.4.1.0.1.1586360307
+volume: /
+location: /
+install-time: 1589603645
+groups: com.apple.FindSystemFiles.pkg-group 
+```
+
+Also try:
+
+`/usr/sbin/pkgutil --pkg-info com.apple.pkg.CLTools_Executables`
+
+You should see:
+
+`package-id: com.apple.pkg.CLTools_Executables`
 
 If the Command Line Tools executables are available, you'll have no problem compiling Nokogiri or any other gems that require native extensions.
 
